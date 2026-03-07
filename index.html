@@ -1,147 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nguyen | Video Editor</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen | Video Editor</title>
+  <meta name="description" content="Portfolio video editor Nguyen với intro video, dự án nổi bật và thông tin liên hệ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<nav>
-
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<section class="hero">
-
-<h1>Nguyen</h1>
-<p>Creative Video Editor</p>
-
-</section>
-
-
-
-<section id="about" class="section">
-
-<h2>About Me</h2>
-
-<p>
-I am a passionate video editor focused on storytelling,
-cinematic editing and social media content.
-</p>
-
-
-<div class="skills">
-
-<h3>Software Skills</h3>
-
-
-<div class="skill">
-
-<div class="skill-name">Adobe Premiere Pro</div>
-
-<div class="skill-bar">
-<div class="skill-level" style="width:90%"></div>
-</div>
-
-</div>
-
-
-<div class="skill">
-
-<div class="skill-name">After Effects</div>
-
-<div class="skill-bar">
-<div class="skill-level" style="width:75%"></div>
-</div>
-
-</div>
-
-
-<div class="skill">
-
-<div class="skill-name">DaVinci Resolve</div>
-
-<div class="skill-bar">
-<div class="skill-level" style="width:70%"></div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="projects" class="section">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-
-<div class="project-card">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEOID">
-</iframe>
-
-</div>
-
-
-<div class="project-card">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEOID">
-</iframe>
-
-</div>
-
-
-<div class="project-card">
-
-<iframe
-src="https://www.youtube.com/embed/VIDEOID">
-</iframe>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section id="contact" class="section">
-
-<h2>Contact</h2>
-
-<p>Email: yourmail@gmail.com</p>
-<p>Instagram: yourinsta</p>
-
-</section>
-
-
-
-<footer>
-
-<p>© 2026 Nguyen Portfolio</p>
-
-</footer>
-
+  <header class="intro" id="top">
+    <video class="intro-video" autoplay muted loop playsinline aria-label="Video mở đầu portfolio">
+      <source src="https://cdn.coverr.co/videos/coverr-man-editing-a-video-project-1576/1080p.mp4" type="video/mp4">
+    </video>
+
+    <div class="intro-overlay"></div>
+
+    <div class="intro-content" id="introContent" aria-live="polite">
+      <p class="intro-kicker">Video Editor Portfolio</p>
+      <h1>Nguyen</h1>
+      <p class="intro-subtitle">Biến footage thô thành câu chuyện cinematic giúp thương hiệu tăng watch-time.</p>
+      <div class="intro-actions">
+        <a class="btn btn-primary" href="#projects">Xem dự án</a>
+        <a class="btn btn-secondary" href="#contact">Liên hệ ngay</a>
+      </div>
+    </div>
+
+    <a class="scroll-indicator" href="#about" aria-label="Cuộn xuống phần giới thiệu">Cuộn xuống ↓</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Mình là video editor tập trung vào storytelling, cinematic editing và social content.
+      Mục tiêu của mình là giúp video của bạn giữ chân người xem lâu hơn và có cảm xúc rõ ràng hơn.
+    </p>
+
+    <div class="skills">
+      <h3>Software Skills</h3>
+
+      <div class="skill">
+        <div class="skill-name">Adobe Premiere Pro</div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">After Effects</div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">DaVinci Resolve</div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:72%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project-card">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project 1" allowfullscreen></iframe>
+        <div class="project-meta">
+          <h3>Music Video Highlight</h3>
+          <p>Cinematic cut + color grading cho MV indie.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <iframe src="https://www.youtube.com/embed/9No-FiEInLA" title="Project 2" allowfullscreen></iframe>
+        <div class="project-meta">
+          <h3>Brand Campaign Reel</h3>
+          <p>Social ad edit tối ưu retention trong 15 giây đầu.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Project 3" allowfullscreen></iframe>
+        <div class="project-meta">
+          <h3>Travel Story Edit</h3>
+          <p>Story-driven pacing, transition nhịp theo soundtrack.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourinsta" target="_blank" rel="noreferrer">@yourinsta</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Nguyen Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
