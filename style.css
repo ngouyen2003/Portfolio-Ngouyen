@@ -1,16 +1,25 @@
-body{
+*{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:white;
+padding:0;
+box-sizing:border-box;
 }
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:center;
 gap:40px;
 padding:20px;
-background:#020617;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 }
@@ -19,16 +28,25 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
+
+nav a:hover{
+color:#22c55e;
+transform:scale(1.1);
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:65px;
 margin-bottom:10px;
+animation:fadeIn 2s ease;
 }
 
 .hero p{
@@ -36,27 +54,31 @@ color:#94a3b8;
 font-size:20px;
 }
 
+/* SECTION */
+
 .section{
 max-width:1000px;
 margin:auto;
 padding:80px 20px;
 }
 
+/* SKILLS */
+
 .skills{
 margin-top:40px;
 }
 
 .skill{
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
-.skill-name{
-margin-bottom:5px;
+.skill p{
+margin-bottom:6px;
 }
 
 .skill-bar{
 background:#1e293b;
-height:12px;
+height:14px;
 border-radius:10px;
 overflow:hidden;
 }
@@ -64,7 +86,10 @@ overflow:hidden;
 .skill-level{
 height:100%;
 background:linear-gradient(90deg,#22c55e,#4ade80);
+animation:grow 2s ease;
 }
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -75,24 +100,47 @@ margin-top:40px;
 
 .project-card{
 background:#1e293b;
-padding:15px;
 border-radius:12px;
-transition:0.3s;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .project-card:hover{
-transform:scale(1.05);
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
 .project-card iframe{
 width:100%;
 height:200px;
-border-radius:10px;
+border:none;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
 background:#020617;
 color:#94a3b8;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes grow{
+from{
+width:0;
+}
 }
