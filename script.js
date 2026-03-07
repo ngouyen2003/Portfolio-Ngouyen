@@ -1,8 +1,6 @@
 const introContent = document.getElementById('introContent');
 const galaxyLights = document.getElementById('galaxyLights');
 const revealDelayMs = 5000;
-const shareLinkInput = document.getElementById('shareLink');
-const copyShareLinkButton = document.getElementById('copyShareLink');
 
 if (introContent) {
   window.addEventListener('load', () => {
@@ -52,25 +50,4 @@ if ('IntersectionObserver' in window && revealTargets.length > 0) {
   revealTargets.forEach((element) => observer.observe(element));
 } else {
   revealTargets.forEach((element) => element.classList.add('is-visible'));
-}
-
-if (shareLinkInput) {
-  const currentUrl = window.location.href;
-  if (!currentUrl.startsWith('file://')) {
-    shareLinkInput.value = currentUrl;
-  }
-}
-
-if (copyShareLinkButton && shareLinkInput) {
-  copyShareLinkButton.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(shareLinkInput.value);
-      copyShareLinkButton.textContent = 'Đã copy ✓';
-      window.setTimeout(() => {
-        copyShareLinkButton.textContent = 'Copy link';
-      }, 1800);
-    } catch (error) {
-      copyShareLinkButton.textContent = 'Không copy được';
-    }
-  });
 }

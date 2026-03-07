@@ -242,32 +242,6 @@ nav a:hover {
   margin-bottom: 18px;
 }
 
-.share-link-controls {
-  margin-top: 14px;
-  display: flex;
-  gap: 10px;
-}
-
-#shareLink {
-  flex: 1;
-  min-width: 220px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.48);
-  background: #020617;
-  color: #e2e8f0;
-}
-
-#copyShareLink {
-  border: 0;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #0b1120;
-  font-weight: 700;
-  padding: 10px 14px;
-  cursor: pointer;
-}
-
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -340,14 +314,6 @@ footer {
     height: 200px;
   }
 
-  .share-link-controls {
-    flex-direction: column;
-  }
-
-  #copyShareLink,
-  #shareLink {
-    width: 100%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
