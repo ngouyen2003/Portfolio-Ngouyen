@@ -86,7 +86,7 @@ body {
   pointer-events: none;
 }
 
-.intro-content.show {
+.intro-content.is-visible {
   animation: revealInfo 1.2s ease forwards;
   pointer-events: auto;
 }

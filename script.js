@@ -1,14 +1,4 @@
-const introContent = document.getElementById('introContent');
 const galaxyLights = document.getElementById('galaxyLights');
-const revealDelayMs = 5000;
-
-if (introContent) {
-  window.addEventListener('load', () => {
-    window.setTimeout(() => {
-      introContent.classList.add('show');
-    }, revealDelayMs);
-  });
-}
 
 if (galaxyLights) {
   const starCount = 70;
@@ -42,7 +32,7 @@ if ('IntersectionObserver' in window && revealTargets.length > 0) {
       });
     },
     {
-      threshold: 0.2,
+      threshold: 0.18,
       rootMargin: '0px 0px -8% 0px'
     }
   );
