@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nguyen | Video Editor</title>
   <meta name="description" content="Portfolio video editor Nguyen với intro video, dự án nổi bật và thông tin liên hệ.">
+  <meta property="og:title" content="Nguyen | Video Editor Portfolio">
+  <meta property="og:description" content="Portfolio với intro video, hiệu ứng galaxy và dự án nổi bật.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nguyen-editor.github.io/portfolio/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,6 +23,7 @@
     </video>
 
     <div class="intro-overlay"></div>
+    <div class="galaxy-lights" id="galaxyLights" aria-hidden="true"></div>
 
     <div class="intro-content" id="introContent" aria-live="polite">
       <p class="intro-kicker">Video Editor Portfolio</p>
@@ -105,6 +110,15 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
     <p>Instagram: <a href="https://instagram.com/yourinsta" target="_blank" rel="noreferrer">@yourinsta</a></p>
+
+    <div class="share-link-box">
+      <h3>Link web để gửi cho mọi người</h3>
+      <p>Gợi ý link GitHub Pages (đổi lại theo username/repo của bạn):</p>
+      <div class="share-link-controls">
+        <input id="shareLink" type="text" value="https://nguyen-editor.github.io/portfolio/" readonly>
+        <button id="copyShareLink" type="button">Copy link</button>
+      </div>
+    </div>
   </section>
 
   <footer>

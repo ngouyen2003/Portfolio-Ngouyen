@@ -26,7 +26,9 @@ body {
 
 .intro {
   position: relative;
+  min-height: 100svh;
   min-height: 100vh;
+  width: 100%;
   display: grid;
   place-items: center;
   padding: 20px;
@@ -46,7 +48,31 @@ body {
 .intro-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.25));
+  background: linear-gradient(to top, rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.28));
+}
+
+.galaxy-lights {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 8px rgba(178, 234, 255, 0.85), 0 0 18px rgba(130, 204, 255, 0.55);
+  animation: twinkle var(--twinkle-duration, 3.8s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}
+
+.star.large {
+  width: 4px;
+  height: 4px;
+  opacity: 0.95;
 }
 
 .intro-content {
@@ -235,6 +261,44 @@ nav a:hover {
   color: #c4f8d4;
 }
 
+.share-link-box {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.share-link-box h3 {
+  margin-bottom: 6px;
+}
+
+.share-link-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+#shareLink {
+  flex: 1;
+  min-width: 220px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: #020617;
+  color: #e2e8f0;
+  padding: 10px;
+}
+
+#copyShareLink {
+  border-radius: 10px;
+  border: 0;
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   padding: 30px;
@@ -271,6 +335,7 @@ footer {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
@@ -281,18 +346,61 @@ footer {
   }
 }
 
-@media (max-width: 640px) {
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.65);
+  }
+}
+
+@media (max-width: 768px) {
   nav {
     gap: 18px;
     padding: 14px;
   }
 
   .intro {
-    min-height: 92vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: 16px;
+  }
+
+  .share-link-controls {
+    flex-direction: column;
+  }
+
+  #copyShareLink,
+  #shareLink {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .intro-content {
+    max-width: 860px;
+  }
+
+  .intro-subtitle {
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
