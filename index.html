@@ -1,238 +1,95 @@
-diff --git a/index.html b/index.html
-index 53f0cb05a3a6c1f407e59841f361397b1bb8ed4a..4282c21b6bc9c8962ce9ccda2a493fc6738f3aab 100644
---- a/index.html
-+++ b/index.html
-@@ -1,147 +1,95 @@
- <!DOCTYPE html>
--<html lang="en">
-+<html lang="vi">
- 
- <head>
--
--<meta charset="UTF-8">
--<meta name="viewport" content="width=device-width, initial-scale=1.0">
--
--<title>Nguyen | Video Editor</title>
--
--<link rel="stylesheet" href="style.css">
--
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Cao Văn Nguyên | Video Editor Portfolio</title>
-+  <meta name="description" content="Portfolio của Cao Văn Nguyên - Video Editor với intro galaxy, showreel nổi bật và phần About Me chi tiết.">
-+  <meta property="og:title" content="Cao Văn Nguyên | Video Editor Portfolio">
-+  <meta property="og:description" content="Hiệu ứng galaxy zoom 5s, showreel nổi bật và About Me.">
-+  <meta property="og:type" content="website">
-+  <meta property="og:url" content="https://nguyen-editor.github.io/portfolio/">
-+  <link rel="preconnect" href="https://fonts.googleapis.com">
-+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-+  <link rel="stylesheet" href="style.css">
- </head>
- 
- <body>
--
--<nav>
--
--<a href="#about">About</a>
--<a href="#projects">Projects</a>
--<a href="#contact">Contact</a>
--
--</nav>
--
--
--<section class="hero">
--
--<h1>Nguyen</h1>
--<p>Creative Video Editor</p>
--
--</section>
--
--
--
--<section id="about" class="section">
--
--<h2>About Me</h2>
--
--<p>
--I am a passionate video editor focused on storytelling,
--cinematic editing and social media content.
--</p>
--
--
--<div class="skills">
--
--<h3>Software Skills</h3>
--
--
--<div class="skill">
--
--<div class="skill-name">Adobe Premiere Pro</div>
--
--<div class="skill-bar">
--<div class="skill-level" style="width:90%"></div>
--</div>
--
--</div>
--
--
--<div class="skill">
--
--<div class="skill-name">After Effects</div>
--
--<div class="skill-bar">
--<div class="skill-level" style="width:75%"></div>
--</div>
--
--</div>
--
--
--<div class="skill">
--
--<div class="skill-name">DaVinci Resolve</div>
--
--<div class="skill-bar">
--<div class="skill-level" style="width:70%"></div>
--</div>
--
--</div>
--
--</div>
--
--</section>
--
--
--
--<section id="projects" class="section">
--
--<h2>Projects</h2>
--
--<div class="projects">
--
--
--<div class="project-card">
--
--<iframe
--src="https://www.youtube.com/embed/VIDEOID">
--</iframe>
--
--</div>
--
--
--<div class="project-card">
--
--<iframe
--src="https://www.youtube.com/embed/VIDEOID">
--</iframe>
--
--</div>
--
--
--<div class="project-card">
--
--<iframe
--src="https://www.youtube.com/embed/VIDEOID">
--</iframe>
--
--</div>
--
--
--</div>
--
--</section>
--
--
--
--<section id="contact" class="section">
--
--<h2>Contact</h2>
--
--<p>Email: yourmail@gmail.com</p>
--<p>Instagram: yourinsta</p>
--
--</section>
--
--
--
--<footer>
--
--<p>© 2026 Nguyen Portfolio</p>
--
--</footer>
--
-+  <header class="intro" id="top">
-+    <video class="intro-video" autoplay muted loop playsinline aria-label="Video mở đầu galaxy portfolio">
-+      <source src="https://cdn.coverr.co/videos/coverr-shooting-stars-1579/1080p.mp4" type="video/mp4">
-+    </video>
-+
-+    <div class="intro-overlay"></div>
-+    <div class="galaxy-lights" id="galaxyLights" aria-hidden="true"></div>
-+
-+    <div class="intro-content reveal-on-scroll" id="introContent" aria-live="polite">
-+      <p class="intro-kicker">PORTFOLIO</p>
-+      <h1>Cao Văn Nguyên</h1>
-+      <p class="intro-subtitle">2003 - Video editor - Đại học văn Hóa - chuyên ngành truyền thông văn hóa</p>
-+      <a class="btn btn-primary" href="#showreel">Xem Showreel nổi bật</a>
-+    </div>
-+
-+    <a class="scroll-indicator" href="#showreel" aria-label="Cuộn xuống phần showreel">Cuộn xuống ↓</a>
-+  </header>
-+
-+  <nav>
-+    <a href="#showreel">Showreel</a>
-+    <a href="#about">About Me</a>
-+  </nav>
-+
-+  <main>
-+    <section id="showreel" class="section">
-+      <h2>Showreel video nổi bật</h2>
-+      <p class="section-lead">Kéo xuống để xem các video hiện dần với hiệu ứng ánh sáng.</p>
-+
-+      <div class="projects">
-+        <article class="project-card reveal-on-scroll">
-+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Showreel 1" loading="lazy" allowfullscreen></iframe>
-+          <div class="project-meta">
-+            <h3>Showreel 01</h3>
-+            <p>Nhịp dựng nhanh, nhấn hook trong 3 giây đầu.</p>
-+          </div>
-+        </article>
-+
-+        <article class="project-card reveal-on-scroll">
-+          <iframe src="https://www.youtube.com/embed/9No-FiEInLA" title="Showreel 2" loading="lazy" allowfullscreen></iframe>
-+          <div class="project-meta">
-+            <h3>Showreel 02</h3>
-+            <p>Màu cinematic, chuyển cảnh theo nhịp soundtrack.</p>
-+          </div>
-+        </article>
-+
-+        <article class="project-card reveal-on-scroll">
-+          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Showreel 3" loading="lazy" allowfullscreen></iframe>
-+          <div class="project-meta">
-+            <h3>Showreel 03</h3>
-+            <p>Tối ưu cảm xúc và retention cho social content.</p>
-+          </div>
-+        </article>
-+      </div>
-+    </section>
-+
-+    <section id="about" class="section about reveal-on-scroll">
-+      <h2>About Me</h2>
-+
-+      <p>Hầu hết mọi người nghĩ video editor chỉ là người đến sau cùng — khi mọi thứ đã quay xong, khi câu chuyện đã có sẵn. Nhưng thật ra, rất nhiều video chỉ thật sự bắt đầu… khi timeline được mở ra.</p>
-+
-+      <p>Tôi là Cao Văn Nguyên, một video editor làm việc chủ yếu với các nội dung mạng xã hội. Công việc của tôi không chỉ là cắt ghép, mà là tìm ra khoảnh khắc đủ mạnh để khiến người xem dừng lại thêm vài giây giữa hàng trăm video họ đang lướt qua. Một nhịp cắt đúng lúc, một dòng caption đúng chỗ, hay một đoạn hook đủ tò mò — đôi khi chỉ cần vậy là một video đã có thể sống lâu hơn trên màn hình của ai đó.</p>
-+
-+      <p>Tôi thích cảm giác khi những đoạn footage tưởng như bình thường bắt đầu có nhịp, có cảm xúc, và cuối cùng trở thành một câu chuyện hoàn chỉnh. Không phải video nào cũng cần phức tạp, nhưng một video tốt luôn cần được hiểu đúng: hiểu người xem, hiểu nền tảng, và hiểu mục tiêu của nội dung.</p>
-+
-+      <p>Giữa một thế giới mà ai cũng có thể quay video, tôi chọn làm người khiến video đó đáng xem hơn một chút — và đôi khi, đáng nhớ hơn một chút.</p>
-+    </section>
-+  </main>
-+
-+  <footer>
-+    <p>© 2026 Cao Văn Nguyên Portfolio</p>
-+  </footer>
-+
-+  <script src="script.js"></script>
- </body>
- 
- </html>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cao Văn Nguyên | Video Editor Portfolio</title>
+  <meta name="description" content="Portfolio của Cao Văn Nguyên - Video Editor với intro galaxy, showreel nổi bật và phần About Me chi tiết.">
+  <meta property="og:title" content="Cao Văn Nguyên | Video Editor Portfolio">
+  <meta property="og:description" content="Hiệu ứng galaxy zoom 5s, showreel nổi bật và About Me.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nguyen-editor.github.io/portfolio/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="intro" id="top">
+    <video class="intro-video" autoplay muted loop playsinline aria-label="Video mở đầu galaxy portfolio">
+      <source src="https://cdn.coverr.co/videos/coverr-shooting-stars-1579/1080p.mp4" type="video/mp4">
+    </video>
+
+    <div class="intro-overlay"></div>
+    <div class="galaxy-lights" id="galaxyLights" aria-hidden="true"></div>
+
+    <div class="intro-content reveal-on-scroll" id="introContent" aria-live="polite">
+      <p class="intro-kicker">PORTFOLIO</p>
+      <h1>Cao Văn Nguyên</h1>
+      <p class="intro-subtitle">2003 - Video editor - Đại học văn Hóa - chuyên ngành truyền thông văn hóa</p>
+      <a class="btn btn-primary" href="#showreel">Xem Showreel nổi bật</a>
+    </div>
+
+    <a class="scroll-indicator" href="#showreel" aria-label="Cuộn xuống phần showreel">Cuộn xuống ↓</a>
+  </header>
+
+  <nav>
+    <a href="#showreel">Showreel</a>
+    <a href="#about">About Me</a>
+  </nav>
+
+  <main>
+    <section id="showreel" class="section">
+      <h2>Showreel video nổi bật</h2>
+      <p class="section-lead">Kéo xuống để xem các video hiện dần với hiệu ứng ánh sáng.</p>
+
+      <div class="projects">
+        <article class="project-card reveal-on-scroll">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Showreel 1" loading="lazy" allowfullscreen></iframe>
+          <div class="project-meta">
+            <h3>Showreel 01</h3>
+            <p>Nhịp dựng nhanh, nhấn hook trong 3 giây đầu.</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal-on-scroll">
+          <iframe src="https://www.youtube.com/embed/9No-FiEInLA" title="Showreel 2" loading="lazy" allowfullscreen></iframe>
+          <div class="project-meta">
+            <h3>Showreel 02</h3>
+            <p>Màu cinematic, chuyển cảnh theo nhịp soundtrack.</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal-on-scroll">
+          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Showreel 3" loading="lazy" allowfullscreen></iframe>
+          <div class="project-meta">
+            <h3>Showreel 03</h3>
+            <p>Tối ưu cảm xúc và retention cho social content.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about reveal-on-scroll">
+      <h2>About Me</h2>
+
+      <p>Hầu hết mọi người nghĩ video editor chỉ là người đến sau cùng — khi mọi thứ đã quay xong, khi câu chuyện đã có sẵn. Nhưng thật ra, rất nhiều video chỉ thật sự bắt đầu… khi timeline được mở ra.</p>
+
+      <p>Tôi là Cao Văn Nguyên, một video editor làm việc chủ yếu với các nội dung mạng xã hội. Công việc của tôi không chỉ là cắt ghép, mà là tìm ra khoảnh khắc đủ mạnh để khiến người xem dừng lại thêm vài giây giữa hàng trăm video họ đang lướt qua. Một nhịp cắt đúng lúc, một dòng caption đúng chỗ, hay một đoạn hook đủ tò mò — đôi khi chỉ cần vậy là một video đã có thể sống lâu hơn trên màn hình của ai đó.</p>
+
+      <p>Tôi thích cảm giác khi những đoạn footage tưởng như bình thường bắt đầu có nhịp, có cảm xúc, và cuối cùng trở thành một câu chuyện hoàn chỉnh. Không phải video nào cũng cần phức tạp, nhưng một video tốt luôn cần được hiểu đúng: hiểu người xem, hiểu nền tảng, và hiểu mục tiêu của nội dung.</p>
+
+      <p>Giữa một thế giới mà ai cũng có thể quay video, tôi chọn làm người khiến video đó đáng xem hơn một chút — và đôi khi, đáng nhớ hơn một chút.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Cao Văn Nguyên Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
